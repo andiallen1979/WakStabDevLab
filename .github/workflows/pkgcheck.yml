@@ -1,0 +1,22 @@
+name: Gentoo Overlay QA (pkgcheck)
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  pkgcheck:
+    runs-on: ubuntu-latest
+    container:
+      image: gentoo/stage3:amd64-nomultilib-openrc
+    steps:
+      - name: Checkout Overlay
+        uses: actions/checkout@v4
+
+      - name: Sync Portage Tree & Run pkgcheck
+        run: |
+          emerge-webrsync -q
+          emerge -q dev-util/pkgcheck
+          pkgcheck scan --exit error
