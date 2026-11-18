@@ -11,6 +11,6 @@
 	cleanup, and NBD image creation on Gentool systems.
 	</longdescription>
 	<upstream>
-	<remote-id type="codeberg">andiallen1979/Gentool</remote-id>
+	<remote-id type="github">andiallen1979/Gentool</remote-id>
 	</upstream>
 </pkgmetadata>

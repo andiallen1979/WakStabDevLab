@@ -12,6 +12,6 @@
 		<flag name="secureboot">Enable kernel module signing and sbctl EFI binary signing</flag>
 	</use>
 	<upstream>
-		<remote-id type="codeberg">andiallen1979/WakStab</remote-id>
+		<remote-id type="github">andiallen1979/WakStab</remote-id>
 	</upstream>
 </pkgmetadata>

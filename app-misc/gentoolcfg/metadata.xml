@@ -9,6 +9,6 @@
 		<flag name="qt6">Build and install the native PyQt6 graphical interface (gentoolcfg-qt6)</flag>
 	</use>
 	<upstream>
-		<remote-id type="codeberg">andiallen1979/WakStab</remote-id>
+		<remote-id type="github">andiallen1979/WakStab</remote-id>
 	</upstream>
 </pkgmetadata>
