@@ -1,0 +1,5 @@
+x11-base/xorg-server xvfb xephyr xnest
+x11-base/xorg-server -xvfb
+x11-base/xorg-server xvfb
+x11-base/xorg-server xvfb
+x11-base/xorg-server xvfb -xnest -xephyr

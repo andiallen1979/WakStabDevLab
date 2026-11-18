@@ -1,0 +1,2 @@
+media-libs/libheif dav1d ffmpeg gdk-pixbuf openh264 rav1e svt-av1 tools x265
+media-libs/libheif -svt-av1

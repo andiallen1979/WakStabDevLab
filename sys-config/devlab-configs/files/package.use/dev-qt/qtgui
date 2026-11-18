@@ -1,0 +1,1 @@
+dev-qt/qtgui X dbus egl jpeg libinput png udev vulkan wayland -accessibility -debug -eglfs evdev -gles2-only -ibus -linuxfb tslib tuio vnc

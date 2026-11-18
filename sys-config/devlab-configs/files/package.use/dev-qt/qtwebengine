@@ -1,0 +1,3 @@
+dev-qt/qtwebengine geolocation webdriver
+dev-qt/qtwebengine -alsa -custom-cflags -geolocation -jumbo-build -opengl -pdfium -pulseaudio -qml -screencast -system-icu -vaapi -vulkan -webdriver -widgets -accessibility -bindist -designer -kerberos -test
+dev-qt/qtwebengine alsa custom-cflags -geolocation -jumbo-build opengl pdfium -pulseaudio -qml -screencast -system-icu vaapi vulkan -webdriver widgets -accessibility bindist -designer -kerberos -test

@@ -1,0 +1,4 @@
+kde-plasma/plasma-desktop ibus scim webengine
+kde-plasma/plasma-desktop -webengine
+kde-plasma/plasma-desktop -handbook
+kde-plasma/plasma-desktop input_devices_wacom

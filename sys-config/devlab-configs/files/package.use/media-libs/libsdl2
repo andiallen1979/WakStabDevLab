@@ -1,0 +1,5 @@
+media-libs/libsdl2 -pipewire
+media-libs/libsdl2 oss
+media-libs/libsdl2 sndio
+media-libs/libsdl2 X
+media-libs/libsdl2 X

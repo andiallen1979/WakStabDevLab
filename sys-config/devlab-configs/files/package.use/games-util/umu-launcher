@@ -1,0 +1,2 @@
+games-util/umu-launcher delta-update
+games-util/umu-launcher -python_targets_python3_15

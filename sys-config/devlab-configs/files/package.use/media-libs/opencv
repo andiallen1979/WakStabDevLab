@@ -1,0 +1,13 @@
+media-libs/opencv avif contrib contribdnn eigen features2d ffmpeg gif java jpeg opencl openexr opengl openmp png python qt6 tiff truetype v4l vaapi vulkan wayland webp -atlas contribfreetype gdal gphoto2 gstreamer -gtk3 -ieee1394 -jasper jpeg2k lapack non-free opencvapps -openni openni2 -quirc spng tbb xine
+media-libs/opencv gtk3
+media-libs/opencv atlas ieee1394 jasper -openni quirc
+media-libs/opencv atlas ieee1394 -jasper -openni quirc
+media-libs/opencv -atlas ieee1394 -jasper -openni quirc
+media-libs/opencv -ffmpeg -gstreamer
+media-libs/opencv ffmpeg
+media-libs/opencv gstreamer
+media-libs/opencv -ffmpeg -gstreamer
+media-libs/opencv python_targets_python3_13
+media-libs/opencv -python_targets_python3_13
+media-libs/opencv -python
+media-libs/opencv -python -java

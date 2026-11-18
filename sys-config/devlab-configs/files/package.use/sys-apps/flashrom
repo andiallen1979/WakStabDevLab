@@ -1,0 +1,2 @@
+sys-apps/flashrom atahpt atapromise jlink-spi mediatek-i2c-spi mstarddc-spi nicnatsemi parade-lspcon realtek-mst-i2c-spi
+sys-apps/flashrom tools

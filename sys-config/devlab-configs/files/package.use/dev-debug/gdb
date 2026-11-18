@@ -1,0 +1,2 @@
+dev-debug/gdb multitarget
+dev-debug/gdb guile sim xxhash lzma

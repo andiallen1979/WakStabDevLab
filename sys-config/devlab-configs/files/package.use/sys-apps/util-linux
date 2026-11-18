@@ -1,0 +1,2 @@
+sys-apps/util-linux audit build cryptsetup fdformat kill slang tty-helpers
+sys-apps/util-linux audit build cryptsetup fdformat -kill slang tty-helpers

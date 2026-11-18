@@ -1,0 +1,2 @@
+media-sound/qmmp X aac alsa cdda dbus flac ladspa mad mpg123 pipewire pulseaudio sndfile vorbis wavpack archive bs2b cddb curl -doc enca ffmpeg game -gnome jack libxmp midi musepack opus -projectm qtmedia -shout -sid -soxr
+media-sound/qmmp X aac alsa cdda dbus flac ladspa mad mpg123 pipewire pulseaudio sndfile vorbis wavpack archive bs2b cddb curl -doc enca ffmpeg game -gnome jack libxmp midi musepack opus -projectm qtmedia -shout -sid soxr

@@ -1,0 +1,40 @@
+# required by app-editors/rehex-0.63.4::pentoo[lua_single_target_lua5-4]
+# required by app-editors/rehex (argument)
+>=dev-lua/busted-2.3.0 lua_targets_lua5-4
+# required by dev-lua/busted-2.3.0::gentoo[-test]
+# required by app-editors/rehex-0.63.4::pentoo[lua_single_target_lua5-4]
+# required by app-editors/rehex (argument)
+>=dev-lua/lua_cliargs-3.0.2 lua_targets_lua5-4
+# required by dev-lua/penlight-1.15.0::gentoo
+# required by dev-lua/busted-2.3.0::gentoo[-test]
+# required by app-editors/rehex-0.63.4::pentoo[lua_single_target_lua5-4]
+# required by app-editors/rehex (argument)
+>=dev-lua/luafilesystem-1.9.0 lua_targets_lua5-4
+# required by dev-lua/busted-2.3.0::gentoo[-test]
+# required by app-editors/rehex-0.63.4::pentoo[lua_single_target_lua5-4]
+# required by app-editors/rehex (argument)
+>=dev-lua/luasystem-0.7.0 lua_targets_lua5-4
+# required by dev-lua/busted-2.3.0::gentoo[-test]
+# required by app-editors/rehex-0.63.4::pentoo[lua_single_target_lua5-4]
+# required by app-editors/rehex (argument)
+>=dev-lua/dkjson-2.9 lua_targets_lua5-4
+# required by dev-lua/busted-2.3.0::gentoo[-test]
+# required by app-editors/rehex-0.63.4::pentoo[lua_single_target_lua5-4]
+# required by app-editors/rehex (argument)
+>=dev-lua/say-1.4.1 lua_targets_lua5-4
+# required by dev-lua/busted-2.3.0::gentoo[-test]
+# required by app-editors/rehex-0.63.4::pentoo[lua_single_target_lua5-4]
+# required by app-editors/rehex (argument)
+>=dev-lua/luassert-1.9.0 lua_targets_lua5-4
+# required by dev-lua/busted-2.3.0::gentoo[-test]
+# required by app-editors/rehex-0.63.4::pentoo[lua_single_target_lua5-4]
+# required by app-editors/rehex (argument)
+>=dev-lua/lua-term-0.8 lua_targets_lua5-4
+# required by dev-lua/busted-2.3.0::gentoo[-test]
+# required by app-editors/rehex-0.63.4::pentoo[lua_single_target_lua5-4]
+# required by app-editors/rehex (argument)
+>=dev-lua/penlight-1.15.0 lua_targets_lua5-4
+# required by dev-lua/busted-2.3.0::gentoo[-test]
+# required by app-editors/rehex-0.63.4::pentoo[lua_single_target_lua5-4]
+# required by app-editors/rehex (argument)
+>=dev-lua/mediator_lua-1.1.2_p0-r1 lua_targets_lua5-4

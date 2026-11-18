@@ -1,0 +1,2 @@
+media-libs/svt-av1 -tools
+media-libs/svt-av1 -tools -pgo

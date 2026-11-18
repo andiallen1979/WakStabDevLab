@@ -1,0 +1,4 @@
+app-emulation/wine-proton perl
+app-emulation/wine-proton -abi_x86_32
+app-emulation/wine-proton crossdev-mingw
+app-emulation/wine-proton -crossdev-mingw

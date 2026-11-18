@@ -1,0 +1,4 @@
+net-misc/networkmanager bluetooth concheck connection-sharing dhcpcd introspection iptables modemmanager nss policykit ppp systemd teamd tools wext wifi audit -iwd libedit nbft nftables resolvconf -syslog
+net-misc/networkmanager vala
+net-misc/networkmanager ovs ofono psl iwd syslog
+net-misc/networkmanager ovs ofono psl iwd -syslog

@@ -1,0 +1,5 @@
+=dev-python/flit-core-4.0.2
+=media-libs/libdisplay-info-0.4.0:0/4::gentoo
+=dev-python/sip-6.16.1
+=sys-kernel/zenpower3-0.2.0-r4::guru 
+>=net-fs/samba-4.16.4-r1::x0rzavi

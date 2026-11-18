@@ -1,0 +1,3 @@
+app-misc/localsearch cue ffmpeg gif gsf iptc raw xmp xps
+app-misc/localsearch cue ffmpeg gif gsf -iptc raw xmp xps
+app-misc/localsearch iptc mediainfo zip

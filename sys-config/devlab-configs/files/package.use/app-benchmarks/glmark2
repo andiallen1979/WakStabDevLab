@@ -1,0 +1,2 @@
+app-benchmarks/glmark2 egl
+app-benchmarks/glmark2 egl gles2

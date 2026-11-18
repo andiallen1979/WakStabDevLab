@@ -1,0 +1,2 @@
+media-plugins/frei0r-plugins -facedetect
+media-plugins/frei0r-plugins -facedetect -scale0tilt

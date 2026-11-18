@@ -1,0 +1,6 @@
+media-plugins/gst-plugins-meta dv dvb -ffmpeg -http -jack lame -libass -libvisual modplug opus oss taglib theora vcd vpx wavpack
+media-plugins/gst-plugins-meta oss
+media-plugins/gst-plugins-meta opus
+media-plugins/gst-plugins-meta X
+media-plugins/gst-plugins-meta wavpack
+media-plugins/gst-plugins-meta X

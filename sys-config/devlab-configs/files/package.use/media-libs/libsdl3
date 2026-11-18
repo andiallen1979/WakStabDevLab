@@ -1,0 +1,5 @@
+media-libs/libsdl3 io-uring
+media-libs/libsdl3 oss
+media-libs/libsdl3 sndio
+media-libs/libsdl3 X
+media-libs/libsdl3 X

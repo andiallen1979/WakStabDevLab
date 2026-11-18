@@ -1,9 +1,13 @@
 # Copyright 2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 EAPI=8
-DESCRIPTION="DevLab devlab-kernel-config package"
+DESCRIPTION="DevLab (~amd64) kernel configuration snippets"
 HOMEPAGE="https://codeberg.org"
 S="${WORKDIR}"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ~amd64"
+src_install() {
+	insinto /etc/kernel/config.d
+	doins "${FILESDIR}"/*.config
+}

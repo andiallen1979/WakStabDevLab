@@ -1,0 +1,3 @@
+sci-libs/vtk imaging boost ffmpeg gdal odbc pdal vtkm web all-modules mysql opencascade openvdb postgres
+sci-libs/vtk -openvdb
+sci-libs/vtk -openvdb -all-modules

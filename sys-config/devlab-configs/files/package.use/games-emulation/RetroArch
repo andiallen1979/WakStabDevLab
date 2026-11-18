@@ -1,0 +1,8 @@
+games-emulation/RetroArch 7zip cg cheevos ffmpeg filters gles3 hid -jack libass libusb materialui network oss v4l2 videocore -xinerama xmb
+games-emulation/RetroArch 7zip -cg cheevos ffmpeg filters gles3 hid -jack libass libusb materialui network oss v4l2 videocore -xinerama xmb
+games-emulation/RetroArch 7zip -cg cheevos ffmpeg filters gles3 hid -jack libass libusb materialui network oss v4l2 -videocore -xinerama xmb
+games-emulation/RetroArch 7zip -cg cheevos ffmpeg filters gles3 hid -jack libass libusb materialui network oss v4l2 -videocore -xinerama xmb jack
+games-emulation/RetroArch 7zip -cg -cheevos ffmpeg filters gles3 hid -jack libass libusb materialui network oss v4l2 -videocore -xinerama xmb jack
+games-emulation/RetroArch 7zip -cg -cheevos ffmpeg filters gles3 hid -jack libass libusb materialui -network oss v4l2 -videocore -xinerama xmb jack
+games-emulation/RetroArch 7zip -cg -cheevos ffmpeg filters -gles3 hid -jack libass libusb materialui network oss v4l2 -videocore -xinerama xmb jack
+games-emulation/RetroArch 7zip -cg -cheevos ffmpeg filters -gles3 hid -jack libass libusb materialui -network oss v4l2 -videocore -xinerama xmb jack

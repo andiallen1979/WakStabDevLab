@@ -1,0 +1,3 @@
+net-vpn/openvpn dco down-root -iproute2 -mbedtls inotify
+net-vpn/openvpn iproute2 kernel-ovpn
+net-vpn/openvpn -iproute2 kernel-ovpn

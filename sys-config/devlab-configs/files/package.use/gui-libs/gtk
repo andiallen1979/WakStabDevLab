@@ -1,0 +1,4 @@
+gui-libs/gtk gstreamer
+gui-libs/gtk colord
+gui-libs/gtk X
+gui-libs/gtk X

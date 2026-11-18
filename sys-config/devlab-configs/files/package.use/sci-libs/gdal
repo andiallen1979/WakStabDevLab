@@ -1,0 +1,2 @@
+sci-libs/gdal avif curl gif java jpegxl muparser openexr pdf png python tools webp zstd archive armadillo blosc cryptopp fits geos gml -hdf5 heif jpeg2k lerc libaec libdeflate lz4 lzma netcdf odbc oracle parquet qhull spatialite sqlite -system-tiff xls
+sci-libs/gdal -netcdf hdf5

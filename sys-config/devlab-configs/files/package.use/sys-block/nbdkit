@@ -1,0 +1,3 @@
+sys-block/nbdkit ext2 libguestfs libssh -libvirt lzma nbd python torrent zstd
+sys-block/nbdkit libvirt
+sys-block/nbdkit curl gnutls

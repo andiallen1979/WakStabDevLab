@@ -1,0 +1,10 @@
+app-emulation/qemu bpf fuse io-uring numa plugins python sdl-image spice ssh usbredir vde vte zstd -infiniband iscsi jemalloc keyutils lzo -multipath nfs passt snappy systemtap virtfs xdp oss capstone glusterfs
+app-emulation/qemu infiniband jack multipath rbd
+app-emulation/qemu infiniband jack -multipath rbd
+app-emulation/qemu infiniband jack -multipath -rbd
+app-emulation/qemu infiniband jack multipath -rbd
+app-emulation/qemu static-user
+app-emulation/qemu static-user -plugins
+app-emulation/qemu elfutils plugins rbd
+app-emulation/qemu elfutils plugins rbd -static-user
+app-emulation/qemu elfutils plugins -rbd -static-user

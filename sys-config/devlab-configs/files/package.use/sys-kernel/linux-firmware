@@ -1,0 +1,4 @@
+sys-kernel/linux-firmware compress-zstd -savedconfig -deduplicate
+sys-kernel/linux-firmware bindist
+sys-kernel/linux-firmware dist-kernel
+sys-kernel/linux-firmware modules

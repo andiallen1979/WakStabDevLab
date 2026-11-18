@@ -1,0 +1,7 @@
+media-libs/mlt libsamplerate rtaudio vdpau vidstab opencv xine
+media-libs/mlt -opencv
+media-libs/mlt opencv vdpau
+media-libs/mlt jack
+media-libs/mlt -opencv -ffmpeg
+media-libs/mlt -opencv -ffmpeg
+media-libs/mlt ffmpeg

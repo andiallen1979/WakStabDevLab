@@ -1,0 +1,2 @@
+sys-boot/grub truetype mount sdl grub_platforms_efi-32 efiemu -libzfs -protect
+

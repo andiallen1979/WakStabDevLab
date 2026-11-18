@@ -1,0 +1,2 @@
+virtual/blas flexiblas eselect-ldso index64
+virtual/blas flexiblas -eselect-ldso index64

@@ -1,0 +1,15 @@
+media-video/ffmpeg-compat amrenc appkit bluray bs2b cdio chromaprint codec2 cuda -fdk -frei0r -fribidi gcrypt gme gmp gsm iec61883 ieee1394 -jack jpeg2k kvazaar lame libaom libaribb24 libcaca -libilbc liblc3 libplacebo -librtmp libsoxr lv2 lzma modplug openh264 openmpt openssl qrcode qsv -quirc rabbitmq rav1e rubberband samba shaderc snappy -soc srt ssh svt-av1 theora vidstab vpx x265 xvid zeromq zimg zvbi socmedia-video/ffmpeg-compat sndio
+media-video/ffmpeg-compat opus
+media-video/ffmpeg-compat soc
+media-video/ffmpeg-compat X
+media-video/ffmpeg-compat X
+media-video/ffmpeg-compat twolame
+media-video/ffmpeg-compat twolame
+media-video/ffmpeg-compat flite
+media-video/ffmpeg-compat flite
+media-video/ffmpeg-compat twolame
+media-video/ffmpeg-compat twolame
+media-video/ffmpeg-compat X
+media-video/ffmpeg-compat X
+media-video/ffmpeg-compat -svt-av1
+media-video/ffmpeg-compat -rabbitmq

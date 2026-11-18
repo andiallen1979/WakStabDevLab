@@ -1,0 +1,7 @@
+app-misc/mc X
+app-misc/mc X
+
+app-misc/mc -X
+app-misc/mc -gpm
+app-misc/mc X -spell
+app-misc/mc -slang

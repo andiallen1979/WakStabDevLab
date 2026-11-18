@@ -1,0 +1,2 @@
+dev-debug/systemtap libvirt ssl debuginfod dtrace-symlink sqlite zeroconf
+dev-debug/systemtap -libvirt

@@ -1,0 +1,5 @@
+sys-apps/systemd -bpf
+sys-apps/systemd bpf curl elfutils idn lzma qrcode tpm xkb
+sys-apps/systemd bpf curl elfutils idn lzma qrcode tpm xkb gnutls
+sys-apps/systemd audit
+sys-apps/systemd apparmor cryptsetup

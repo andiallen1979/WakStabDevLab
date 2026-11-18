@@ -1,0 +1,2 @@
+sys-fs/lvm2 lvm nvme sanlock xfs
+sys-fs/lvm2 -sanlock

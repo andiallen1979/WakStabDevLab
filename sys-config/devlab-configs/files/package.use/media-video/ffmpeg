@@ -1,0 +1,15 @@
+media-video/ffmpeg opus amf amr amrenc bluray bs2b cdio chromium fdk flite -frei0r fribidi gcrypt gme gsm jpeg2k kvazaar ladspa lame libaom libaribb24 libcaca libilbc liblc3 libplacebo -librtmp libsoxr lv2 lzma modplug nvenc ocr openal openh264 openssl qrcode qsv rav1e rist rubberband sndio speex srt ssh svt-av1 theora twolame vidstab vmaf vpx x265 xvid cuda chromaprint codec2 cuda iec61883 ieee1394 jack -librtmp -opencolorio openmpt -quirc rabbitmq samba snappy soc zeromq zimg zvbi
+media-video/ffmpeg -chromaprint
+media-video/ffmpeg sndio
+media-video/ffmpeg opus
+media-video/ffmpeg X
+media-video/ffmpeg twolame
+media-video/ffmpeg flite
+media-video/ffmpeg twolame
+media-video/ffmpeg X
+media-video/ffmpeg chromaprint frei0r gmp librtmp opencolorio quirc
+media-video/ffmpeg chromaprint frei0r -gmp librtmp opencolorio quirc
+media-video/ffmpeg -svt-av1
+media-video/ffmpeg -chromaprint
+media-video/ffmpeg -rabittmq
+media-video/ffmpeg -rabbitmq

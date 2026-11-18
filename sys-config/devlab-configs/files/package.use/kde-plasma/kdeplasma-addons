@@ -1,0 +1,4 @@
+kde-plasma/kdeplasma-addons share webengine
+kde-plasma/kdeplasma-addons -webengine
+kde-plasma/kdeplasma-addons -handbook
+kde-plasma/kdeplasma-addons -share

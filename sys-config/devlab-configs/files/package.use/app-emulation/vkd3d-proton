@@ -1,0 +1,3 @@
+app-emulation/vkd3d-proton extras
+app-emulation/vkd3d-proton crossdev-mingw
+app-emulation/vkd3d-proton -crossdev-mingw

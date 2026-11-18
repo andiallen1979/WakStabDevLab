@@ -1,0 +1,4 @@
+sys-kernel/gentoo-kernel modules-compress savedconfig
+
+sys-kernel/gentoo-kernel -initramfs -savedconfig
+sys-kernel/gentoo-kernel initramfs

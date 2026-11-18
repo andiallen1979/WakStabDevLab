@@ -1,0 +1,155 @@
+xfce-extra/xfce4-sensors-plugin lm-sensors
+# required by sys-apps/systemd-260.1-r1::gentoo[python_single_target_python3_14]
+# required by virtual/udev-217-r7::gentoo[systemd]
+# required by sys-fs/udev-init-scripts-35::gentoo
+>=dev-python/jinja2-3.1.6 python_targets_python3_14
+# required by sys-apps/systemd-260.1-r1::gentoo[python_single_target_python3_14]
+# required by virtual/udev-217-r7::gentoo[systemd]
+# required by sys-fs/udev-init-scripts-35::gentoo
+>=dev-python/lxml-6.1.0 python_targets_python3_14
+# required by dev-python/lxml-6.1.0::gentoo
+# required by sys-apps/systemd-260.1-r1::gentoo[python_single_target_python3_14]
+# required by virtual/udev-217-r7::gentoo[systemd]
+# required by sys-fs/udev-init-scripts-35::gentoo
+>=dev-python/cython-3.2.4 python_targets_python3_14
+# required by dev-python/setuptools-82.0.1::gentoo
+# required by dev-python/markupsafe-3.0.3::gentoo
+# required by dev-python/jinja2-3.1.6::gentoo
+# required by sys-auth/pambase-20251104-r1::gentoo
+# required by sys-libs/pam-1.7.2::gentoo
+# required by sys-apps/systemd-260.1-r1::gentoo[pam]
+# required by virtual/udev-217-r7::gentoo[systemd]
+# required by sys-fs/udev-init-scripts-35::gentoo
+>=dev-python/gpep517-19 python_targets_python3_14
+# required by dev-python/markupsafe-3.0.3::gentoo
+# required by dev-python/jinja2-3.1.6::gentoo
+# required by sys-auth/pambase-20251104-r1::gentoo
+# required by sys-libs/pam-1.7.2::gentoo
+# required by sys-apps/systemd-260.1-r1::gentoo[pam]
+# required by virtual/udev-217-r7::gentoo[systemd]
+# required by sys-fs/udev-init-scripts-35::gentoo
+>=dev-python/setuptools-82.0.1 python_targets_python3_14
+# required by dev-python/setuptools-82.0.1::gentoo
+# required by dev-python/markupsafe-3.0.3::gentoo
+# required by dev-python/jinja2-3.1.6::gentoo
+# required by sys-auth/pambase-20251104-r1::gentoo
+# required by sys-libs/pam-1.7.2::gentoo
+# required by sys-apps/systemd-260.1-r1::gentoo[pam]
+# required by virtual/udev-217-r7::gentoo[systemd]
+# required by sys-fs/udev-init-scripts-35::gentoo
+>=dev-python/jaraco-functools-4.4.0 python_targets_python3_14
+# required by dev-python/setuptools-82.0.1::gentoo
+# required by dev-python/markupsafe-3.0.3::gentoo
+# required by dev-python/jinja2-3.1.6::gentoo
+# required by sys-auth/pambase-20251104-r1::gentoo
+# required by sys-libs/pam-1.7.2::gentoo
+# required by sys-apps/systemd-260.1-r1::gentoo[pam]
+# required by virtual/udev-217-r7::gentoo[systemd]
+# required by sys-fs/udev-init-scripts-35::gentoo
+>=dev-python/jaraco-text-4.2.0 python_targets_python3_14
+# required by dev-python/setuptools-82.0.1::gentoo
+# required by dev-python/markupsafe-3.0.3::gentoo
+# required by dev-python/jinja2-3.1.6::gentoo
+# required by sys-auth/pambase-20251104-r1::gentoo
+# required by sys-libs/pam-1.7.2::gentoo
+# required by sys-apps/systemd-260.1-r1::gentoo[pam]
+# required by virtual/udev-217-r7::gentoo[systemd]
+# required by sys-fs/udev-init-scripts-35::gentoo
+>=dev-python/more-itertools-11.0.2 python_targets_python3_14
+# required by dev-python/wheel-0.46.3::gentoo
+# required by dev-python/setuptools-82.0.1::gentoo
+# required by dev-python/markupsafe-3.0.3::gentoo
+# required by dev-python/jinja2-3.1.6::gentoo
+# required by sys-auth/pambase-20251104-r1::gentoo
+# required by sys-libs/pam-1.7.2::gentoo
+# required by sys-apps/systemd-260.1-r1::gentoo[pam]
+# required by virtual/udev-217-r7::gentoo[systemd]
+# required by sys-fs/udev-init-scripts-35::gentoo
+>=dev-python/packaging-26.0 python_targets_python3_14
+# required by dev-python/setuptools-82.0.1::gentoo
+# required by dev-python/markupsafe-3.0.3::gentoo
+# required by dev-python/jinja2-3.1.6::gentoo
+# required by sys-auth/pambase-20251104-r1::gentoo
+# required by sys-libs/pam-1.7.2::gentoo
+# required by sys-apps/systemd-260.1-r1::gentoo[pam]
+# required by virtual/udev-217-r7::gentoo[systemd]
+# required by sys-fs/udev-init-scripts-35::gentoo
+>=dev-python/platformdirs-4.9.6 python_targets_python3_14
+# required by dev-python/setuptools-82.0.1::gentoo
+# required by dev-python/markupsafe-3.0.3::gentoo
+# required by dev-python/jinja2-3.1.6::gentoo
+# required by sys-auth/pambase-20251104-r1::gentoo
+# required by sys-libs/pam-1.7.2::gentoo
+# required by sys-apps/systemd-260.1-r1::gentoo[pam]
+# required by virtual/udev-217-r7::gentoo[systemd]
+# required by sys-fs/udev-init-scripts-35::gentoo
+>=dev-python/wheel-0.46.3 python_targets_python3_14
+# required by dev-python/setuptools-82.0.1::gentoo
+# required by dev-python/markupsafe-3.0.3::gentoo
+# required by dev-python/jinja2-3.1.6::gentoo
+# required by sys-auth/pambase-20251104-r1::gentoo
+# required by sys-libs/pam-1.7.2::gentoo
+# required by sys-apps/systemd-260.1-r1::gentoo[pam]
+# required by virtual/udev-217-r7::gentoo[systemd]
+# required by sys-fs/udev-init-scripts-35::gentoo
+>=dev-python/setuptools-scm-10.0.5 python_targets_python3_14
+# required by dev-python/setuptools-82.0.1::gentoo
+# required by dev-python/markupsafe-3.0.3::gentoo
+# required by dev-python/jinja2-3.1.6::gentoo
+# required by sys-auth/pambase-20251104-r1::gentoo
+# required by sys-libs/pam-1.7.2::gentoo
+# required by sys-apps/systemd-260.1-r1::gentoo[pam]
+# required by virtual/udev-217-r7::gentoo[systemd]
+# required by sys-fs/udev-init-scripts-35::gentoo
+>=dev-python/trove-classifiers-2026.1.14.14 python_targets_python3_14
+# required by dev-python/jaraco-functools-4.4.0::gentoo
+# required by dev-python/jaraco-text-4.2.0::gentoo
+# required by dev-python/setuptools-82.0.1::gentoo
+# required by dev-python/markupsafe-3.0.3::gentoo
+# required by dev-python/jinja2-3.1.6::gentoo
+# required by sys-auth/pambase-20251104-r1::gentoo
+# required by sys-libs/pam-1.7.2::gentoo
+# required by sys-apps/systemd-260.1-r1::gentoo[pam]
+# required by virtual/udev-217-r7::gentoo[systemd]
+# required by sys-fs/udev-init-scripts-35::gentoo
+>=dev-python/flit-core-3.12.0 python_targets_python3_14
+# required by dev-python/setuptools-scm-10.0.5::gentoo[-test]
+# required by dev-python/setuptools-82.0.1::gentoo
+# required by dev-python/markupsafe-3.0.3::gentoo
+# required by dev-python/jinja2-3.1.6::gentoo
+# required by sys-auth/pambase-20251104-r1::gentoo
+# required by sys-libs/pam-1.7.2::gentoo
+# required by sys-apps/systemd-260.1-r1::gentoo[pam]
+# required by virtual/udev-217-r7::gentoo[systemd]
+# required by sys-fs/udev-init-scripts-35::gentoo
+>=dev-python/vcs-versioning-1.1.1 python_targets_python3_14
+# required by dev-python/jaraco-text-4.2.0::gentoo
+# required by dev-python/setuptools-82.0.1::gentoo
+# required by dev-python/markupsafe-3.0.3::gentoo
+# required by dev-python/jinja2-3.1.6::gentoo
+# required by sys-auth/pambase-20251104-r1::gentoo
+# required by sys-libs/pam-1.7.2::gentoo
+# required by sys-apps/systemd-260.1-r1::gentoo[pam]
+# required by virtual/udev-217-r7::gentoo[systemd]
+# required by sys-fs/udev-init-scripts-35::gentoo
+>=dev-python/jaraco-context-6.1.2 python_targets_python3_14
+# required by dev-python/gpep517-19::gentoo
+# required by dev-python/ensurepip-pip-26.1.1::gentoo
+# required by dev-lang/python-3.14.5::gentoo[ensurepip]
+# required by x11-base/xcb-proto-1.17.0::gentoo[python_targets_python3_14]
+# required by x11-libs/libxcb-1.17.0::gentoo
+# required by x11-misc/compose-tables-1.8.13::gentoo
+# required by x11-libs/libX11-1.8.13::gentoo
+# required by x11-libs/libXt-1.3.1-r1::gentoo
+# required by sys-apps/dbus-1.16.2::gentoo[X]
+# required by sys-apps/systemd-260.1-r1::gentoo
+# required by virtual/udev-217-r7::gentoo[systemd]
+# required by sys-fs/udev-init-scripts-35::gentoo
+>=dev-python/installer-0.7.0 python_targets_python3_14
+# required by dev-python/jinja2-3.1.6::gentoo
+# required by sys-auth/pambase-20251104-r1::gentoo
+# required by sys-libs/pam-1.7.2::gentoo
+# required by sys-apps/systemd-260.1-r1::gentoo[pam]
+# required by virtual/udev-217-r7::gentoo[systemd]
+# required by sys-fs/udev-init-scripts-35::gentoo
+>=dev-python/markupsafe-3.0.3 python_targets_python3_14

@@ -1,0 +1,4 @@
+app-emulation/wine-vanilla -wow64 capi -crossdev-mingw dos ffmpeg gphoto2 -llvm-libunwind netapi odbc opencl pcap perl samba scanner -mingw
+app-emulation/wine-vanilla X
+app-emulation/wine-vanilla X
+app-emulation/wine-vanilla wow64

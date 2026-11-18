@@ -1,0 +1,5 @@
+dev-lang/lazarus -gtk
+dev-lang/lazarus gtk
+dev-lang/lazarus -gtk
+dev-lang/lazarus -gui
+dev-lang/lazarus -gui -qt6

@@ -1,0 +1,5 @@
+sci-libs/opencascade json
+sci-libs/opencascade X
+sci-libs/opencascade X
+sci-libs/opencascade freeimage jemalloc optimize vtk
+sci-libs/opencascade -vtk

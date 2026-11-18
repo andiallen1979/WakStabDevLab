@@ -1,0 +1,7 @@
+media-libs/mesa lm-sensors vulkan
+media-libs/mesa llvm
+media-libs/mesa X
+media-libs/mesa X
+media-libs/mesa -opencl
+media-libs/mesa opencl
+media-libs/mesa -opencl

@@ -1,0 +1,3 @@
+app-office/libreoffice base eds gstreamer java odk pdfimport -gtk3
+app-office/libreoffice gtk3
+app-office/libreoffice -gtk3

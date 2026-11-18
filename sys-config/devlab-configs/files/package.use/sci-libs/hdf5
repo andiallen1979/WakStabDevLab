@@ -1,0 +1,8 @@
+sci-libs/hdf5 cxx szip
+sci-libs/hdf5 mpi
+sci-libs/hdf5 -hl -mpi
+sci-libs/hdf5 hl -mpi
+sci-libs/hdf5 -szip
+sci-libs/hdf5 szip
+sci-libs/hdf5 -szip
+sci-libs/hdf5 szip

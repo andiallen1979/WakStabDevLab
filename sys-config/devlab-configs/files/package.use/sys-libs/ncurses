@@ -1,0 +1,3 @@
+sys-libs/ncurses -gpm
+sys-libs/ncurses gpm profile
+sys-libs/ncurses -gpm

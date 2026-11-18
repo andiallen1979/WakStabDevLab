@@ -1,0 +1,3 @@
+dev-python/pyside uitools 3d charts httpserver location multimedia network-auth numpy pdfium positioning quick quick3d remoteobjects scxml sensors serialbus serialport spatialaudio webengine websockets webview
+dev-python/pyside -webengine
+dev-python/pyside -webengine -webview

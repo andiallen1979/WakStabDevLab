@@ -1,0 +1,2 @@
+net-libs/libproxy -duktape
+net-libs/libproxy abi_x86_32

@@ -1,0 +1,7 @@
+media-sound/sox oss
+media-sound/sox sndio
+media-sound/sox opus
+media-sound/sox sndfile
+media-sound/sox twolame
+media-sound/sox wavpack
+media-sound/sox twolame

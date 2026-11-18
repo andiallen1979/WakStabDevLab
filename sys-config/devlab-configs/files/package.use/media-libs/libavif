@@ -1,0 +1,3 @@
+media-libs/libavif gdk-pixbuf
+media-libs/libavif gdk-pixbuf dav1d extras libyuv rav1e svt-av1
+media-libs/libavif -svt-av1

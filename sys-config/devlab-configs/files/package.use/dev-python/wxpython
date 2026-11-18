@@ -1,0 +1,2 @@
+dev-python/wxpython -python_targets_python3_13
+dev-python/wxpython python_targets_python3_13

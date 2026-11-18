@@ -1,0 +1,6 @@
+dev-qt/qtbase vulkan opengl journald gtk icu evdev cups odbc
+dev-qt/qtbase X
+dev-qt/qtbase X
+dev-qt/qtbase mysql
+dev-qt/qtbase -opengl
+dev-qt/qtbase opengl

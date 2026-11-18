@@ -1,0 +1,5 @@
+media-video/pipewire  alsa X bluetooth dbus flatpak gstreamer loudness modemmanager pipewire-alsa pulseaudio readline sound-server ssl systemd v4l zeroconf doc -echo-cancel extra ffmpeg fftw libcamera lv2 man roc
+media-video/pipewire -ffmpeg
+media-video/pipewire X
+media-video/pipewire X
+media-video/pipewire -roc

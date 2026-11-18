@@ -1,0 +1,2 @@
+net-libs/mbedtls programs threads
+net-libs/mbedtls -programs

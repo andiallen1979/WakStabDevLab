@@ -1,0 +1,5 @@
+www-client/firefox hardened hwaccel libproxy openh264 system-pipewire system-png wasm-sandbox wifi
+www-client/firefox sndio
+www-client/firefox X
+www-client/firefox X
+www-client/firefox -telemetry -wifi

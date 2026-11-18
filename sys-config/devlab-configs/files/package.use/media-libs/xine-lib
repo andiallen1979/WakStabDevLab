@@ -1,0 +1,5 @@
+media-libs/xine-lib aalib bluray dav1d dxr3 fbcon imagemagick -jack libcaca modplug musepack nfs samba sftp theora vcd vdr vpx xinerama xvmc
+media-libs/xine-lib oss
+media-libs/xine-lib X
+media-libs/xine-lib wavpack
+media-libs/xine-lib X

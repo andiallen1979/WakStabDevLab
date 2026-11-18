@@ -1,0 +1,3 @@
+app-emulation/dxvk -crossdev-mingw
+app-emulation/dxvk crossdev-mingw
+app-emulation/dxvk -crossdev-mingw
