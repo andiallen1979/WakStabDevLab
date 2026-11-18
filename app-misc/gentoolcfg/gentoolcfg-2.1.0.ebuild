@@ -7,7 +7,7 @@ PYTHON_COMPAT=( python3_{13..14} )
 inherit desktop distutils-r1
 
 DESCRIPTION="Portage configurator with Textual TUI, Qt6 GUI, Build Monitor, and Kernel Config manager"
-HOMEPAGE="https://codeberg.org/andiallen1979/WakStab"
+HOMEPAGE="https://github.com/andiallen1979/WakStabDevLab.git/andiallen1979/WakStab"
 S="${WORKDIR}/${P}"
 LICENSE="MIT"
 SLOT="0"

@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 EAPI=8
 DESCRIPTION="Meta-package for DevLab (~amd64) development environment"
-HOMEPAGE="https://codeberg.org"
+HOMEPAGE="https://github.com/andiallen1979/WakStabDevLab.git"
 LICENSE="metapackage"
 SLOT="0"
 KEYWORDS="amd64 ~amd64"
