@@ -1,0 +1,11 @@
+DEFINED_PHASES=install postinst
+DESCRIPTION=Declarative bootloader and Secure Boot switcher for Gentool hosts
+EAPI=8
+HOMEPAGE=https://github.com/andiallen1979/WakStabDevLab.git
+IUSE=+grub systemd-boot refind secureboot
+KEYWORDS=amd64 arm64
+LICENSE=GPL-2
+RDEPEND=sys-boot/efibootmgr sys-kernel/dracut sys-kernel/installkernel grub? ( sys-boot/grub ) systemd-boot? ( sys-apps/systemd ) refind? ( sys-boot/refind ) secureboot? ( app-crypt/sbctl )
+REQUIRED_USE=^^ ( grub systemd-boot refind ) secureboot? ( systemd-boot )
+SLOT=0
+_md5_=ff989ed993c554ea0cfff2ef874098d6
