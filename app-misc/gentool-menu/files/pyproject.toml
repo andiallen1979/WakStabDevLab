@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gentool-menu"
+version = "1.4.3"
+description = "Kconfig menuconfig TUI for managing Portage USE flags across installed packages"
+requires-python = ">=3.10"
+dependencies = ["kconfiglib"]
+
+[project.scripts]
+gentool-menu = "gentool_menu.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["gentool_menu*"]

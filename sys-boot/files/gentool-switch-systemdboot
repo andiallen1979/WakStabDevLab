@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+set -euo pipefail
+[[ $EUID -eq 0 ]] || { echo "Run as root."; exit 1; }
+mountpoint -q /efi || mount /efi
+NO_EMERGE=0; SB=0
+for arg in "$@"; do
+  [[ "$arg" == "--no-emerge" ]] && NO_EMERGE=1
+  [[ "$arg" == "--secureboot" ]] && SB=1
+done
+
+echo "sys-kernel/installkernel systemd systemd-boot dracut ukify uki -grub -refind -efistub" > /etc/portage/package.use/sys-kernel/installkernel
+sed -i -E 's/-boot\b/boot/g; s/-ukify\b/ukify/g' /etc/portage/package.use/sys-apps/systemd 2>/dev/null || true
+printf "layout=bls\ninitrd_generator=dracut\nuki_generator=ukify\n" > /etc/kernel/install.conf
+if [[ $SB -eq 1 ]]; then
+  printf "CONFIG_MODULE_SIG=y\nCONFIG_MODULE_SIG_FORCE=y\nCONFIG_MODULE_SIG_ALL=y\nCONFIG_MODULE_SIG_SHA256=y\n" > /etc/kernel/config.d/module-sign.config
+else
+  printf "# CONFIG_MODULE_SIG is not set\n# CONFIG_MODULE_SIG_FORCE is not set\n" > /etc/kernel/config.d/module-sign.config
+fi
+
+rm -rf /efi/EFI/WakStab gentool /efi/EFI/Wakaka /efi/EFI/gentoo /efi/EFI/refind /boot/grub /boot/kernel-* /boot/initramfs-*
+while read -r line; do
+  if [[ "$line" =~ ^Boot([0-9A-Fa-f]{4})\*?[[:space:]]+(WakStab gentool|Wakaka|gentoo|GRUB|rEFInd) ]]; then
+    efibootmgr -b "${BASH_REMATCH}" -B || true
+  fi
+done < <(efibootmgr)
+
+if [[ $NO_EMERGE -eq 0 ]]; then
+  emerge -1v --changed-use sys-apps/systemd sys-kernel/installkernel
+  bootctl --esp-path=/efi install
+  LDFLAGS="" emerge -1v sys-kernel/gentoo-kernel @module-rebuild
+else
+  bootctl --esp-path=/efi install || true
+  echo "Config updated. Run: emerge --config sys-kernel/gentoo-kernel"
+fi
+[[ $SB -eq 1 ]] && command -v sbctl &>/dev/null && sbctl sign-all && sbctl verify
+echo "systemd-boot configured cleanly!"

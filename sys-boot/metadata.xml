@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://gentoo.org">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>andiallen1979@protonmail.com</email>
+		<name>J. Allen</name>
+	</maintainer>
+	<use>
+		<flag name="grub">Configure GRUB2 on /efi with /boot kernel deployment</flag>
+		<flag name="systemd-boot">Configure systemd-boot with Unified Kernel Images (UKI)</flag>
+		<flag name="refind">Configure rEFInd boot manager with /boot auto-scan</flag>
+		<flag name="secureboot">Enable kernel module signing and sbctl EFI binary signing</flag>
+	</use>
+	<upstream>
+		<remote-id type="codeberg">andiallen1979/WakStab</remote-id>
+	</upstream>
+</pkgmetadata>

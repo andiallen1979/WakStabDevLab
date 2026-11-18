@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>andiallen1979@protonmail.com</email>
+		<name>J. Allen</name>
+	</maintainer>
+	<use>
+		<flag name="gtk3">Build and install the native GTK3 graphical interface (gentoolcfg-gtk3)</flag>
+		<flag name="gtk4">Build and install the native GTK4 graphical interface (gentoolcfg-gtk4)</flag>
+		<flag name="qt6">Build and install the native PyQt6 graphical interface (gentoolcfg-qt6)</flag>
+	</use>
+	<upstream>
+		<remote-id type="codeberg">andiallen1979/WakStabDevLab</remote-id>
+	</upstream>
+</pkgmetadata>
