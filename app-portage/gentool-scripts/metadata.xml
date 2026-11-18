@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://gentoo.org">
+<pkgmetadata>
+	<maintainer type="person">
+	<email>andiallen1979@protonmail.com</email>
+	<name>J. Allen</name>
+	</maintainer>
+	<longdescription>
+	Collection of administrative helper scripts for managing Portage
+	package keywords, USE flags, environment overrides, masks, package
+	cleanup, and NBD image creation on Gentool systems.
+	</longdescription>
+	<upstream>
+	<remote-id type="codeberg">andiallen1979/Gentool</remote-id>
+	</upstream>
+</pkgmetadata>

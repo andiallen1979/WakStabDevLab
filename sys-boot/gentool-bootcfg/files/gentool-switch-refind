@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+set -euo pipefail
+[[ $EUID -eq 0 ]] || { echo "Run as root."; exit 1; }
+mountpoint -q /efi || mount /efi
+NO_EMERGE=0
+for arg in "$@"; do [[ "$arg" == "--no-emerge" ]] && NO_EMERGE=1; done
+
+echo "sys-kernel/installkernel refind dracut -grub -systemd -systemd-boot -ukify -uki -efistub" > /etc/portage/package.use/sys-kernel/installkernel
+sed -i -E 's/\bboot\b/-boot/g; s/\bsecureboot\b/-secureboot/g' /etc/portage/package.use/sys-apps/systemd 2>/dev/null || true
+printf "layout=grub\ninitrd_generator=dracut\nuki_generator=none\nBOOT_ROOT=/boot\n" > /etc/kernel/install.conf
+printf "# CONFIG_MODULE_SIG is not set\n# CONFIG_MODULE_SIG_FORCE is not set\n" > /etc/kernel/config.d/module-sign.config
+
+MID=$(cat /etc/machine-id 2>/dev/null || true)
+[[ -n "$MID" && -d "/efi/$MID" ]] && rm -rf "/efi/$MID"
+rm -rf /efi/c5f35ad52c064dee6e69bd996af2c953 /efi/loader /efi/EFI/systemd /efi/EFI/Linux /efi/EFI/WakStab gentool /efi/EFI/Wakaka /boot/grub
+while read -r line; do
+  if [[ "$line" =~ ^Boot([0-9A-Fa-f]{4})\*?[[:space:]]+(Linux\ Boot\ Manager|systemd-boot|WakStab gentool|Wakaka|GRUB) ]]; then
+    efibootmgr -b "${BASH_REMATCH}" -B || true
+  fi
+done < <(efibootmgr)
+
+[[ $NO_EMERGE -eq 0 ]] && emerge -1v --changed-use sys-boot/refind sys-kernel/installkernel
+refind-install --usedefault /dev/nvme0n1p1 2>/dev/null || refind-install
+ROOT_UUID=$(findmnt -n -o UUID /)
+CMDLINE=$(grep -oP 'GRUB_CMDLINE_LINUX_DEFAULT="\K[^"]+' /etc/default/grub 2>/dev/null || echo "ro quiet splash")
+printf '"Boot with standard options"  "root=UUID=%s %s"\n"Boot to single-user mode"    "root=UUID=%s ro single"\n' "$ROOT_UUID" "$CMDLINE" "$ROOT_UUID" > /boot/refind_linux.conf
+if [[ $NO_EMERGE -eq 0 ]]; then
+  LDFLAGS="" emerge -1v sys-kernel/gentoo-kernel @module-rebuild
+else
+  echo "Config updated. Run: emerge --config sys-kernel/gentoo-kernel"
+fi
+echo "rEFInd configured cleanly!"
