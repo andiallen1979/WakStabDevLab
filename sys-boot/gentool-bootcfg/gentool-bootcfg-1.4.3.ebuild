@@ -6,7 +6,7 @@ HOMEPAGE="https://github.com/andiallen1979/WakStabDevLab.git"
 S="${WORKDIR}"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 arm64"
+KEYWORDS="~amd64 ~arm64"
 IUSE="+grub systemd-boot refind secureboot"
 REQUIRED_USE="^^ ( grub systemd-boot refind ) secureboot? ( systemd-boot )"
 RDEPEND="
@@ -14,7 +14,7 @@ RDEPEND="
 	sys-kernel/dracut
 	sys-kernel/installkernel
 	grub? ( sys-boot/grub )
-	systemd-boot? ( sys-apps/systemd )
+	systemd-boot? ( sys-apps/systemd:= )
 	refind? ( sys-boot/refind )
 	secureboot? ( app-crypt/sbctl )
 "

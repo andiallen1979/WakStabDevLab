@@ -6,7 +6,7 @@ HOMEPAGE="https://github.com/andiallen1979/WakStabDevLab.git"
 S="${WORKDIR}"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~amd64 arm64 ~arm64"
+KEYWORDS="amd64 arm64"
 RDEPEND="app-shells/bash sys-apps/portage"
 src_unpack() { unpack "${FILESDIR}/gentool-scripts-bundle.tar.xz"; }
 src_install() {

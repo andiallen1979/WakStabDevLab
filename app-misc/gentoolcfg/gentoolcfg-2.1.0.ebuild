@@ -6,18 +6,17 @@ DISTUTILS_USE_PEP517=setuptools
 PYTHON_COMPAT=( python3_{13..14} )
 inherit desktop distutils-r1
 
-DESCRIPTION="Portage configurator with Textual TUI, Qt6 GUI, Build Monitor, and Kernel Config manager"
+DESCRIPTION="TUI and PyQt6 GUI configuration manager for Gentoo Portage"
 HOMEPAGE="https://github.com/andiallen1979/WakStabDevLab.git/andiallen1979/WakStab"
 S="${WORKDIR}/${P}"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~arm64"
-IUSE="+gui qt6"
+IUSE="gui"
 
 RDEPEND="
 	app-portage/genlop
 	x11-apps/xwininfo
-	dev-python/textual[${PYTHON_USEDEP}]
 	sys-apps/portage[${PYTHON_USEDEP}]
 	gui? (
 		qt6? ( dev-python/pyqt6[gui,widgets,${PYTHON_USEDEP}] )
