@@ -2,7 +2,7 @@
 set -euo pipefail
 [[ $EUID -eq 0 ]] || { echo "Run as root."; exit 1; }
 mountpoint -q /efi || mount /efi
-NO_EMERGE=0; SB=0
+NO_EMERGE=0; SB=0; ID="$(grep -E "^[[:space:]]*COMMON_NAME=" /etc/portage/make.conf 2>/dev/null | tail -n1 | cut -d= -f2- | tr -d "\"'" || hostname -s)"
 for arg in "$@"; do
   [[ "$arg" == "--no-emerge" ]] && NO_EMERGE=1
   [[ "$arg" == "--secureboot" ]] && SB=1
@@ -17,12 +17,12 @@ else
   printf "# CONFIG_MODULE_SIG is not set\n# CONFIG_MODULE_SIG_FORCE is not set\n" > /etc/kernel/config.d/module-sign.config
 fi
 
-rm -rf /efi/EFI/WakStab gentool /efi/EFI/Wakaka /efi/EFI/gentoo /efi/EFI/refind /boot/grub /boot/kernel-* /boot/initramfs-*
+rm -rf "/efi/EFI/${ID}" /efi/EFI/gentoo /efi/EFI/refind /boot/grub /boot/kernel-* /boot/initramfs-*
 while read -r line; do
-  if [[ "$line" =~ ^Boot([0-9A-Fa-f]{4})\*?[[:space:]]+(WakStab gentool|Wakaka|gentoo|GRUB|rEFInd) ]]; then
+  if [[ "$line" =~ ^Boot([0-9A-Fa-f]{4})\*?[[:space:]]+(${ID}|gentoo|GRUB|rEFInd) ]]; then
     efibootmgr -b "${BASH_REMATCH}" -B || true
   fi
-done < <(efibootmgr)
+done < <(efibootmgr 2>/dev/null || true)
 
 if [[ $NO_EMERGE -eq 0 ]]; then
   emerge -1v --changed-use sys-apps/systemd sys-kernel/installkernel
@@ -33,4 +33,4 @@ else
   echo "Config updated. Run: emerge --config sys-kernel/gentoo-kernel"
 fi
 [[ $SB -eq 1 ]] && command -v sbctl &>/dev/null && sbctl sign-all && sbctl verify
-echo "systemd-boot configured cleanly!"
+echo "systemd-boot (${ID}) configured cleanly!"

@@ -20,7 +20,7 @@ def generate_kconfig(state: dict, kpath: Path) -> None:
         L.append(f'menu "{cat} ({len(pkgs)} pkgs' + (f', {mod} keyworded)"' if mod else ')"'))
         for p in pkgs:
             tag = " [kw]" if (p["kw_t"] or p["kw_l"]) else ""
-            L += [f'menu "{p["name"]}{tag} ({p["cp"]})"', f'config {p["sym_kt"]}', '    bool "Accept ~amd64"', f'    default {"y" if p["kw_t"] else "n"}', "", f'config {p["sym_kl"]}', '    bool "Accept **"', f'    default {"y" if p["kw_l"] else "n"}', "", "endmenu", ""]
+            L += [f'menu "{p["name"]}{tag} ({p["cp"]})"', f'config {p["sym_kt"]}', '    bool "Accept ~{p['arch']}"', f'    default {"y" if p["kw_t"] else "n"}', "", f'config {p["sym_kl"]}', '    bool "Accept **"', f'    default {"y" if p["kw_l"] else "n"}', "", "endmenu", ""]
         L += ["endmenu", ""]
     L += ["endmenu", "", 'menu "3. Package Masking (package.mask)"']
     for cat in sorted(by_cat):
@@ -171,7 +171,7 @@ def apply_all_changes(state: dict, kconf: kconfiglib.Kconfig) -> None:
         nl = (sl.str_value == "y") if sl else p["kw_l"]
         if nt != p["kw_t"] or nl != p["kw_l"]:
             changed += 1
-            kws = (["~amd64"] if nt else []) + (["**"] if nl else [])
+            kws = ([f"~{p['arch']}"] if nt else []) + (["**"] if nl else [])
             t = base / "package.accept_keywords" / cat / name
             write_one(t, f"{cp} {' '.join(kws)}" if kws else None)
             print(f"  [package.accept_keywords] Updated {t}")

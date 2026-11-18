@@ -9,6 +9,6 @@ HOMEPAGE="https://codeberg.org"
 S="${WORKDIR}/${P}"
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 ~amd64 arm64 ~arm64"
+KEYWORDS="amd64 arm64"
 RDEPEND="dev-python/kconfiglib[${PYTHON_USEDEP}] sys-apps/portage[${PYTHON_USEDEP}]"
 src_unpack() { mkdir -p "${S}"; cp -r "${FILESDIR}"/* "${S}/" || die; }

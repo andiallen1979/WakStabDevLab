@@ -135,7 +135,7 @@ def collect_portage_state() -> dict:
     mc_file = MAKE_CONF_PATH
     if MAKE_CONF_PATH.is_dir():
         cands = sorted(f for f in MAKE_CONF_PATH.iterdir() if f.is_file() and not f.name.startswith("."))
-        mc_file = cands[-1] if cands else (MAKE_CONF_PATH / "00-wakstab.conf")
+        mc_file = cands[-1] if cands else (MAKE_CONF_PATH / "00-gentool.conf")
     mc_text = mc_file.read_text(encoding="utf-8") if mc_file.is_file() else ""
     exp_use = {t.lstrip("-"): not t.startswith("-") for t in read_make_conf_var(mc_text, "USE")}
     act_use = set(settings.get("USE", "").split())
@@ -160,7 +160,7 @@ def collect_portage_state() -> dict:
         kws, penvs = saved_kw.get(cp, set()), saved_penv.get(cp, set()); em = saved_mask.get(cp, "")
         mm = "NONE" if not em else ("FWD" if em.startswith((">=", ">")) else ("EQ" if em.startswith(("=", "~")) else "ALL"))
         sb = sanitize_symbol(cp)
-        packages.append({"cp": cp, "cpv": cp_ver[cp], "cat": cat, "name": name, "flags": flags, "use_mod": any(x["effective"] != x["installed"] for x in flags), "kw_t": ("~amd64" in kws or "~*" in kws), "kw_l": ("**" in kws), "sym_kt": f"KT_{sb}", "sym_kl": f"KL_{sb}", "mask_atom": em, "mask_mode": mm, "sym_mn": f"MN_{sb}", "sym_ma": f"MA_{sb}", "sym_me": f"ME_{sb}", "sym_mf": f"MF_{sb}", "envs": [{"name": e, "initial": e in penvs, "sym": f"PE_{sb}__{sanitize_symbol(e)}"} for e in all_envs], "has_env": bool(penvs)})
+        packages.append({"cp": cp, "cpv": cp_ver[cp], "cat": cat, "name": name, "flags": flags, "use_mod": any(x["effective"] != x["installed"] for x in flags), "arch": settings.get("ARCH", "amd64"), "kw_t": (f"~{settings.get('ARCH', 'amd64')}" in kws or "~*" in kws), "kw_l": ("**" in kws), "sym_kt": f"KT_{sb}", "sym_kl": f"KL_{sb}", "mask_atom": em, "mask_mode": mm, "sym_mn": f"MN_{sb}", "sym_ma": f"MA_{sb}", "sym_me": f"ME_{sb}", "sym_mf": f"MF_{sb}", "envs": [{"name": e, "initial": e in penvs, "sym": f"PE_{sb}__{sanitize_symbol(e)}"} for e in all_envs], "has_env": bool(penvs)})
     env_items = [{"fname": fn, "body": b, "desc": d, "initial": fn in env_profiles, "sym": f"EF_{sanitize_symbol(fn)}"} for fn, (b, d) in sorted(presets.items())]
     ed_envs = [{"fname": fn, "vars": [{"key": k, "initial": parse_env_vars(c).get(k, ""), "sym": f"EV_{sanitize_symbol(fn)}__{sanitize_symbol(k)}"} for k in (STD_ENV_VARS + [k for k in parse_env_vars(c) if k not in STD_ENV_VARS])], "sym_del": f"ED_{sanitize_symbol(fn)}"} for fn, c in sorted(env_profiles.items())]
     return {"packages": packages, "env_items": env_items, "ed_envs": ed_envs, "mc_file": mc_file, "mc_text": mc_text, "exp_use": exp_use, "exp_feat": exp_feat, "g_use": g_use, "g_feat": g_feat}
