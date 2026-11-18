@@ -15,8 +15,14 @@ jobs:
       - name: Checkout Overlay
         uses: actions/checkout@v4
 
-      - name: Sync Portage Tree & Run pkgcheck
+      - name: Install pkgcheck (via Gentoo Binhost) & Scan Overlay
         run: |
           emerge-webrsync -q
-          emerge -q dev-util/pkgcheck
-          pkgcheck scan --exit error
+          mkdir -p /etc/portage/binrepos.conf
+          cat << 'BIN' > /etc/portage/binrepos.conf/gentoobinhost.conf
+          [binhost]
+          priority = 9999
+          sync-uri = https://gentoo.org
+          BIN
+          FEATURES="getbinpkg" emerge -q --getbinpkg dev-util/pkgcheck
+          pkgcheck scan --repo . --exit error
