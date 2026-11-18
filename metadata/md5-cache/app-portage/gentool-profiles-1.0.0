@@ -1,0 +1,9 @@
+DEFINED_PHASES=install
+DESCRIPTION=Unbranded Gentoo profile builder, registry client, and offline compressed handbooks
+EAPI=8
+HOMEPAGE=https://fragtoo.com
+KEYWORDS=amd64 ~amd64 arm64 ~arm64
+LICENSE=MIT
+RDEPEND=dev-lang/python:*
+SLOT=0
+_md5_=68c370cdd4a7b5fa8d10409a21775c56

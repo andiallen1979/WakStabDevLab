@@ -1,0 +1,54 @@
+#!/usr/bin/env python3
+import json, os, re, shutil, subprocess, sys, urllib.parse, urllib.request
+from datetime import datetime
+from pathlib import Path
+
+PROFILES_URL = os.environ.get("GENTOOL_PROFILES_URL", "https://fragtoo.com")
+LOCAL_FALLBACK = Path("/usr/src/DEV/repos/fragtoo-site/profiles.json")
+
+def load_catalog() -> list[dict]:
+    try:
+        req = urllib.request.Request(PROFILES_URL, headers={"User-Agent": "gentool-profiles/1.0"})
+        with urllib.request.urlopen(req, timeout=8) as r:
+            return json.loads(r.read().decode()).get("profiles", [])
+    except Exception:
+        if LOCAL_FALLBACK.is_file():
+            return json.loads(LOCAL_FALLBACK.read_text(encoding="utf-8")).get("profiles", [])
+        return []
+
+def apply_profile(prof: dict, root: str = "/") -> None:
+    r = Path(root)
+    mc = r / "etc/portage/make.conf"
+    mc.parent.mkdir(parents=True, exist_ok=True)
+    txt = mc.read_text(encoding="utf-8", errors="ignore") if mc.is_file() else ""
+    if mc.is_file(): shutil.copy2(mc, f"{mc}.{datetime.now().strftime('%Y%m%d-%H%M%S')}.bak")
+    for k, v in prof.get("make_conf", {}).items():
+        pat = re.compile(rf'(?m)^\s*{re.escape(k)}\s*=\s*["\'][^"\']*["\']')
+        txt = pat.sub(f'{k}="{v}"', txt, count=1) if pat.search(txt) else txt.rstrip() + f'\n{k}="{v}"\n'
+    mc.write_text(txt, encoding="utf-8")
+    for sub, key in [("package.use/profile", "package_use"), ("package.accept_keywords/profile", "package_keywords"), ("package.mask/profile", "package_mask")]:
+        items = prof.get(key, [])
+        if items:
+            p = r / "etc/portage" / sub; p.parent.mkdir(parents=True, exist_ok=True)
+            p.write_text("\n".join(items) + "\n", encoding="utf-8")
+    if prof.get("kernel_config"):
+        kp = r / "etc/kernel/config.d/50-profile.config"; kp.parent.mkdir(parents=True, exist_ok=True)
+        kp.write_text(prof["kernel_config"], encoding="utf-8")
+    if prof.get("world_packages"):
+        wp = r / "etc/portage/sets/profile"; wp.parent.mkdir(parents=True, exist_ok=True)
+        wp.write_text("\n".join(prof["world_packages"]) + "\n", encoding="utf-8")
+
+def build_submit_url(prof: dict) -> str:
+    body = "```json\n" + json.dumps(prof, indent=2) + "\n```"
+    q = urllib.parse.urlencode({"title": f"Register profile: {prof['id']}", "body": body})
+    return f"https://github.com?{q}"
+
+if __name__ == "__main__":
+    args = sys.argv[1:]
+    if not args or args[0] == "list":
+        for p in load_catalog(): print(f"{p['id']:<28} [{p.get('arch','any')}] {p['name']} — {p.get('description','')}")
+    elif args[0] == "apply" and len(args) >= 2:
+        prof = next((p for p in load_catalog() if p["id"] == args[1]), None)
+        if not prof: sys.exit(f"Profile '{args[1]}' not found.")
+        apply_profile(prof, args[2] if len(args) > 2 else "/")
+        print(f"Applied profile '{prof['id']}' to {args[2] if len(args) > 2 else '/'}")
