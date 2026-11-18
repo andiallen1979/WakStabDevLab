@@ -3,9 +3,9 @@ DESCRIPTION=Declarative bootloader and Secure Boot switcher for Gentool hosts
 EAPI=8
 HOMEPAGE=https://github.com/andiallen1979/WakStabDevLab.git
 IUSE=+grub systemd-boot refind secureboot
-KEYWORDS=~amd64 ~arm64
+KEYWORDS=~amd64
 LICENSE=GPL-2
 RDEPEND=sys-boot/efibootmgr sys-kernel/dracut sys-kernel/installkernel grub? ( sys-boot/grub ) systemd-boot? ( sys-apps/systemd:= ) refind? ( sys-boot/refind ) secureboot? ( app-crypt/sbctl )
 REQUIRED_USE=^^ ( grub systemd-boot refind ) secureboot? ( systemd-boot )
 SLOT=0
-_md5_=dee01d3808089e11110787743fac6e50
+_md5_=c9db7c53b79d89cb2e4425f24c093cd4

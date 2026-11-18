@@ -12,7 +12,7 @@ S="${WORKDIR}/${P}"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~arm64"
-IUSE="gui"
+IUSE="gui +qt6"
 
 RDEPEND="
 	app-portage/genlop
